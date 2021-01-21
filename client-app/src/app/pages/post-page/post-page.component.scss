@@ -1,0 +1,26 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 12%;
+    margin-bottom: 15px;
+}
+
+.body {
+    width: 85%;
+    height: 80%;
+    overflow: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+    .body_right {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .body_left {
+        padding: 10px;
+        width: 20%;
+    }
+}

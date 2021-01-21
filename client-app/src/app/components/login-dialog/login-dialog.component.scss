@@ -1,0 +1,33 @@
+p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+hr {
+  background-color: #e61739;
+}
+
+.dialog {
+  .content {
+    display: flex;
+    flex-direction: column;
+    min-width: 14vw;
+
+    mat-form-field {
+      font-size: 18px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  .btn {
+    font-size: 15px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
