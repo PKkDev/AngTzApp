@@ -20,22 +20,27 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {
   }
 
-  get<T>(path: string, params?: HttpParams, headers?: HttpHeaders): Observable<T> {
-    if (params) {
+  public get<T>(path: string, params?: HttpParams, headers?: HttpHeaders): Observable<T> {
+    if (params)
       httpOptions.params = params;
-    }
+    else
+      httpOptions.params = new HttpParams();
+    if (headers)
+      httpOptions.headers = headers;
+
     return this.httpClient.get<T>(this.url + path, httpOptions);
   }
 
-  post<T>(path: string, body?: object, params?: HttpParams, headers?: HttpHeaders): Observable<T> {
-    if (params) {
+  public post<T>(path: string, body?: object, params?: HttpParams, headers?: HttpHeaders): Observable<T> {
+    if (params)
       httpOptions.params = params;
-    }
+    else
+      httpOptions.params = new HttpParams();
     if (headers) {
       httpOptions.headers = headers;
-      if (headers.get('Content-Type') === 'multipart/form-data') {
-        return this.httpClient.post<T>(this.url + path, body, httpOptions);
-      }
+      // if (headers.get('Content-Type') === 'multipart/form-data') {
+      //   return this.httpClient.post<T>(this.url + path, body, httpOptions);
+      // }
     }
     return this.httpClient.post<T>(this.url + path, JSON.stringify(body), httpOptions);
   }

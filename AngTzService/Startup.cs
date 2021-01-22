@@ -3,9 +3,11 @@ using AngTzService.Infrastructure.Context;
 using AngTzService.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
@@ -71,6 +73,16 @@ namespace AngTzService
             });
 
             #endregion
+
+            #region spa
+
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "clientApp";
+            });
+
+            #endregion
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -80,13 +92,13 @@ namespace AngTzService
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseSpaStaticFiles();
+            app.UseSpaStaticFiles();
 
-            //app.UseStaticFiles(new StaticFileOptions()
-            //{
-            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot")),
-            //    RequestPath = new PathString("/wwwroot")
-            //});
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot")),
+                RequestPath = new PathString("/wwwroot")
+            });
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -111,10 +123,10 @@ namespace AngTzService
                 endpoints.MapControllers();
             });
 
-            //app.UseSpa(spa =>
-            //{
-            //    spa.Options.SourcePath = "clientApp";
-            //});
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "clientApp";
+            });
         }
     }
 }

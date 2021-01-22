@@ -56,6 +56,14 @@
             <param name="ct"></param>
             <returns></returns>
         </member>
+        <member name="M:AngTzService.API.Controllers.PostController.AddPost(AngTzService.Domain.Dto.PostDto,System.Threading.CancellationToken)">
+            <summary>
+            добавление описания посту
+            </summary>
+            <param name="post"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
         <member name="M:AngTzService.API.Controllers.PostController.UpdatePost(System.Int32,AngTzService.Domain.Dto.PostDto,System.Threading.CancellationToken)">
             <summary>
             изменение поста
@@ -65,11 +73,12 @@
             <param name="ct"></param>
             <returns></returns>
         </member>
-        <member name="M:AngTzService.API.Controllers.PostController.InsertPost(AngTzService.Domain.Dto.PostDto,System.Threading.CancellationToken)">
+        <member name="M:AngTzService.API.Controllers.PostController.UpdatePostFile(Microsoft.AspNetCore.Http.IFormCollection,System.Int32,System.Threading.CancellationToken)">
             <summary>
-            добавление поста
+            добавление файлов посту
             </summary>
-            <param name="post"></param>
+            <param name="files"></param>
+            <param name="id"></param>
             <param name="ct"></param>
             <returns></returns>
         </member>
@@ -78,6 +87,23 @@
             удаление поста
             </summary>
             <param name="id"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AngTzService.API.Controllers.PostController.RemovePostFile(System.Int32,System.String,System.Threading.CancellationToken)">
+            <summary>
+            удаление файла поста
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AngTzService.API.Controllers.PostController.DownloadFIle(AngTzService.Domain.Dto.LoadFileQuery,System.Threading.CancellationToken)">
+            <summary>
+            загрузка файла
+            </summary>
+            <param name="query"></param>
             <param name="ct"></param>
             <returns></returns>
         </member>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AngTzService.Domain.Dto
 {
@@ -8,10 +9,12 @@ namespace AngTzService.Domain.Dto
 
         public string Author { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         public bool Edited { get; set; }
 
         public string Text { get; set; }
+
+        public List<FileDescDto> FileDescDto { get; set; }
     }
 }

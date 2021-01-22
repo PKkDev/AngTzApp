@@ -19,6 +19,10 @@ const routes: Routes = [
     component: NotFoundPageComponent
   },
   {
+    path: 'swagger',
+    redirectTo: 'swagger'
+  },
+  {
     path: '**',
     component: NotFoundPageComponent
   }

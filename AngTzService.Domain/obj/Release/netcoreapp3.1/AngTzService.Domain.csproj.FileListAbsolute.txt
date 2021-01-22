@@ -1,0 +1,8 @@
+D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Release\netcoreapp3.1\AngTzService.Domain.deps.json
+D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Release\netcoreapp3.1\AngTzService.Domain.dll
+D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Release\netcoreapp3.1\AngTzService.Domain.pdb
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.AssemblyInfoInputs.cache
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.AssemblyInfo.cs
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.csproj.CoreCompileInputs.cache
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.dll
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.pdb

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,5 +23,8 @@ namespace AngTzService.Infrastructure.Entity
 
         [Column("text")]
         public string Text { get; set; }
+
+        public List<PostFile> PostFile { get; set; }
+
     }
 }

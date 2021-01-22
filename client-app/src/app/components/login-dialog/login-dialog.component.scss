@@ -1,3 +1,5 @@
+@import "~src/styles.scss";
+
 p {
   text-align: center;
   margin-bottom: 10px;
@@ -25,9 +27,6 @@ hr {
   justify-content: space-between;
 
   .btn {
-    font-size: 15px;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
+    @include basic_btn(15px);
   }
 }

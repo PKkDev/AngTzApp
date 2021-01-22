@@ -22,9 +22,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 // page
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { PostPageComponent } from './pages/post-page/post-page.component';
+// pipe
+import { PostDateParsPipe } from './pipe/post-date-pars.pipe';
+
 
 @NgModule({
   declarations: [
+    PostDateParsPipe,
     PostPageComponent,
     NotFoundPageComponent,
     AppComponent,

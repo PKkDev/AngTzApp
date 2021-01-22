@@ -10,9 +10,9 @@ C:\Users\Кирилл\source\repos\AngTzService\AngTzService.Domain\obj\Debug\ne
 D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Debug\netcoreapp3.1\AngTzService.Domain.deps.json
 D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Debug\netcoreapp3.1\AngTzService.Domain.dll
 D:\work\ang_tz\AngTzService\AngTzService.Domain\bin\Debug\netcoreapp3.1\AngTzService.Domain.pdb
-D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.csprojAssemblyReference.cache
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.AssemblyInfoInputs.cache
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.AssemblyInfo.cs
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.csproj.CoreCompileInputs.cache
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.dll
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.pdb
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Debug\netcoreapp3.1\AngTzService.Domain.csprojAssemblyReference.cache

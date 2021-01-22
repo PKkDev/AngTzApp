@@ -9,9 +9,18 @@ namespace AngTzService.Infrastructure.Context
 
         public DbSet<User> User { get; set; }
 
-        public DashboardContext(DbContextOptions<DashboardContext> options)
-        : base(options)
+        public DbSet<PostFile> PostFile { get; set; }
+
+        public DashboardContext(DbContextOptions<DashboardContext> options) : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PostFile>()
+            .HasOne(p => p.Post)
+            .WithMany(b => b.PostFile)
+            .HasForeignKey(p => p.IdPost);
         }
 
     }

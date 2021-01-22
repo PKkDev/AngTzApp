@@ -1,7 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CompackToastService, TypeToast } from 'ngx-compack';
-import { Subscription } from 'rxjs';
-import { ApiService } from 'src/app/services/api.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from '../model/post';
 
@@ -19,26 +17,49 @@ export class PostContainerComponent implements OnInit, OnDestroy {
   private timeOutFilter: any
 
   constructor(
-    private apiService: ApiService,
-    private cts: CompackToastService,
-    private ps: PostService) { }
+    public authService: AuthService,
+    private ps: PostService) {
+  }
 
   ngOnInit() {
+
     this.ps.getPostSubs()
       .subscribe(next => {
         this.listPost = next;
         this.setTextFilter();
       })
+
+    this.ps.getCancelAddPostEventSubs()
+      .subscribe(() => {
+        this.listPost.shift();
+        this.setTextFilter();
+      });
+
+    // this.ps.getAddPostEventSubs()
+    //   .subscribe(() => {
+    //     if (this.listPost.find(x => x.isNew) == null) {
+    //       this.listPost.unshift({ author: '', date: null, displayDate: '', edited: false, id: -1, text: '', isNew: true, fileDescDto: [] });
+    //       this.setTextFilter();
+    //     }
+    //   })
   }
 
   ngOnDestroy() {
+  }
+
+
+  public emiteAddPost() {
+    if (this.listPost.find(x => x.isNew) == null) {
+      this.listPost.unshift({ author: '', date: null, displayDate: '', edited: false, id: -1, text: '', isNew: true, fileDescDto: [] });
+      this.setTextFilter();
+    }
   }
 
   public setTextFilter() {
     if (this.timeOutFilter)
       clearTimeout(this.timeOutFilter);
     this.timeOutFilter = setTimeout(() => {
-      this.listViewPost = this.listPost.filter(x => x.author.includes(this.textFilter))
+      this.listViewPost = this.listPost.filter(x => x.author.includes(this.textFilter) || x.isNew)
     }, 1000 * 2)
   }
 

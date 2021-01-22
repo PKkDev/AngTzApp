@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngTzService.API", "AngTzService\AngTzService.API.csproj", "{DA331A76-2B46-408C-9FA0-260102E7731C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngTzService.API", "AngTzService\AngTzService.API.csproj", "{DA331A76-2B46-408C-9FA0-260102E7731C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngTzService.Domain", "AngTzService.Domain\AngTzService.Domain.csproj", "{97065E61-20EF-4E3A-8874-E394EFBAC90D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngTzService.Domain", "AngTzService.Domain\AngTzService.Domain.csproj", "{97065E61-20EF-4E3A-8874-E394EFBAC90D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngTzService.Infrastructure", "AngTzService.Infrastructure\AngTzService.Infrastructure.csproj", "{9266BC72-A70F-4505-96D7-D67EBFD0C457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngTzService.Infrastructure", "AngTzService.Infrastructure\AngTzService.Infrastructure.csproj", "{9266BC72-A70F-4505-96D7-D67EBFD0C457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,12 @@
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\bin\Release\netcoreapp3.1\AngTzService.Infrastructure.deps.json
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\bin\Release\netcoreapp3.1\AngTzService.Infrastructure.dll
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\bin\Release\netcoreapp3.1\AngTzService.Infrastructure.pdb
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\bin\Release\netcoreapp3.1\AngTzService.Domain.dll
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\bin\Release\netcoreapp3.1\AngTzService.Domain.pdb
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.csprojAssemblyReference.cache
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.AssemblyInfoInputs.cache
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.AssemblyInfo.cs
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.csproj.CopyComplete
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.dll
+D:\work\ang_tz\AngTzService\AngTzService.Infrastructure\obj\Release\netcoreapp3.1\AngTzService.Infrastructure.pdb
