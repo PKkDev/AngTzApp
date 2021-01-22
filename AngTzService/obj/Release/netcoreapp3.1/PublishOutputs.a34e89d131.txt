@@ -2,13 +2,14 @@ D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\An
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\files\icon.png
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\files\S11NBL2AHJ.txt
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\mobile\monitSystem.apk
-D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\web.config
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\nlog.config
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\3rdpartylicenses.txt
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\assets\scss\mixins.scss
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\favicon.ico
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\index.html
-D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\main.de73e2eed8de38ac7c3e.js
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\main.d1ab72d43075a6d039ef.js
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\polyfills.8c151b8375e767ff858f.js
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\runtime.0e49e2b53282f40c8925.js
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\clientApp\styles.2f1cc8f3767dfcc1abd0.css
@@ -47,6 +48,9 @@ D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\Zs
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\MySql.Data.EntityFrameworkCore.dll
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\MySqlConnector.dll
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.dll
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.Extensions.Logging.dll
+D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.Web.AspNetCore.dll
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\Pomelo.JsonObject.dll
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\PubTmp\Out\Renci.SshNet.dll

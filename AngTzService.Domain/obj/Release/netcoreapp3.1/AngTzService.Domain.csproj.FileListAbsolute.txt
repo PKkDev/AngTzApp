@@ -6,3 +6,4 @@ D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzS
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.csproj.CoreCompileInputs.cache
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.dll
 D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.pdb
+D:\work\ang_tz\AngTzService\AngTzService.Domain\obj\Release\netcoreapp3.1\AngTzService.Domain.csprojAssemblyReference.cache

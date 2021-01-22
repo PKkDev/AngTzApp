@@ -3,7 +3,6 @@ D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\appsettings.j
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\3rdpartylicenses.txt
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\favicon.ico
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\index.html
-D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\main.de73e2eed8de38ac7c3e.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\polyfills.8c151b8375e767ff858f.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\runtime.0e49e2b53282f40c8925.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\styles.2f1cc8f3767dfcc1abd0.css
@@ -75,4 +74,9 @@ D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\AngTzService.
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\AngTzService.API.xml
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\AngTzService.API.pdb
 D:\work\ang_tz\AngTzService\AngTzService\obj\Release\netcoreapp3.1\AngTzService.API.genruntimeconfig.cache
-D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\web.config
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\assets\scss\mixins.scss
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\main.d1ab72d43075a6d039ef.js
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\nlog.config
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.dll
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.Extensions.Logging.dll
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.Web.AspNetCore.dll
