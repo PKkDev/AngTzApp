@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpRequest } from '@angular/common/http';
 import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { CompackToastService, TypeToast } from 'ngx-compack';
 import { ApiService } from 'src/app/services/api.service';
@@ -8,18 +8,8 @@ import { environment } from 'src/environments/environment';
 import { Post } from '../model/post';
 import { saveAs } from 'file-saver';
 import { LoadFileQuery } from '../model/load-file-query';
+import { SelectedFiles } from '../model/selected-files';
 
-
-export class SelectedFiles {
-  public file: File;
-  public name: string;
-  public size: number;
-  constructor() {
-    this.name = '';
-    this.size = 0;
-    this.file = new File([], '')
-  }
-}
 
 @Component({
   selector: 'app-post-view',
@@ -39,8 +29,8 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
   public selectedFiles: SelectedFiles[] = [];
   // http
   private subsDel: any;
+  private subsFile: any;
   private subsUpdate: any;
-
 
   constructor(
     private http: HttpClient,
@@ -88,7 +78,7 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
           .subscribe(
             next => {
               this.postService.emiteUpdatePosts();
-              this.cts.emitNewNotif({ type: TypeToast.Info, title: 'Удаление поста', message: 'Успешно' });
+              this.cts.emitNewNotif({ type: TypeToast.Success, title: 'Удаление поста', message: 'Успешно' });
             },
             error => {
               this.acceptError();
@@ -109,7 +99,7 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
           .subscribe(
             next => {
               this.postService.emiteUpdatePosts();
-              this.cts.emitNewNotif({ type: TypeToast.Info, title: 'Удаление файла', message: 'Успешно' });
+              this.cts.emitNewNotif({ type: TypeToast.Success, title: 'Удаление файла', message: 'Успешно' });
             },
             error => {
               this.acceptError();
@@ -119,6 +109,7 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     }
   }
+
   public removeFileFromSelected(name: string) {
     const index = this.selectedFiles.findIndex(x => x.name == name);
     if (index != -1) {
@@ -128,14 +119,17 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public updatePost() {
     if (this.editedPost) {
-      let url = ''
-      if (this.editedPost.isNew)
+      let url = '';
+      let action = '';
+      if (this.editedPost.isNew) {
         url = 'post/add-post';
-      else
+        action = 'Добавление'
+      }
+      else {
+        action = 'Изменение'
         url = 'post/update-post?id=' + this.editedPost.id.toString();
-      // const param = new HttpParams()
-      //   .append('id', this.editedPost.id.toString())
-      this.subsDel = this.apiService.post<number>(url, this.editedPost)//, param)
+      }
+      this.subsUpdate = this.apiService.post<number>(url, this.editedPost)//, param)
         .subscribe(
           next => {
             console.log(next);
@@ -146,14 +140,11 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
                 }, 1500
               );
             }
-            this.cts.emitNewNotif({ type: TypeToast.Info, title: 'Изменение поста', message: 'Успешно' });
+            this.cts.emitNewNotif({ type: TypeToast.Success, title: action + ' поста', message: 'Успешно' });
           },
           error => {
             this.acceptError();
-            this.cts.emitNewNotif({ type: TypeToast.Error, title: 'Изменение поста', message: 'Произошла ошибка' });
-          },
-          () => {
-
+            this.cts.emitNewNotif({ type: TypeToast.Error, title: action + ' поста', message: 'Произошла ошибка' });
           }
         );
     }
@@ -177,7 +168,7 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
               size: file.size
             });
           } else {
-            this.cts.emitNewNotif({ type: TypeToast.Error, title: 'Выбор файлов', message: 'Дубликат файла' });
+            this.cts.emitNewNotif({ type: TypeToast.Info, title: 'Выбор файлов', message: 'Дубликат файла' });
           }
 
         }
@@ -198,17 +189,17 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
       const req = new HttpRequest('POST', environment.urlApi + url, formData, {
         reportProgress: true,
         params: new HttpParams()
-          .append('id', id.toString())//this.editedPost.id.toString())
+          .append('id', id.toString())
       });
 
-      this.http.request(req)
+      this.subsFile = this.http.request(req)
         .subscribe(next => { },
           error => {
-            console.log(error);
+            this.acceptError();
             this.cts.emitNewNotif({ type: TypeToast.Error, title: 'Изменение файлов поста', message: 'Успешно' });
           },
           () => {
-            this.cts.emitNewNotif({ type: TypeToast.Info, title: 'Изменение файлов поста', message: 'Успешно' });
+            this.cts.emitNewNotif({ type: TypeToast.Success, title: 'Изменение файлов поста', message: 'Успешно' });
             this.postService.emiteUpdatePosts();
           });
     }
@@ -220,7 +211,7 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
     if (window.confirm('скачать?')) {
       if (this.postData) {
         const httpBody = new LoadFileQuery(name, this.postData.id);
-        this.http.post(environment.urlApi + "post/file", httpBody, {
+        this.subsFile = this.http.post(environment.urlApi + "post/file", httpBody, {
           reportProgress: true,
           responseType: 'blob'
         }).subscribe(
@@ -253,6 +244,8 @@ export class PostViewComponent implements OnInit, AfterViewInit, OnDestroy {
       this.subsDel.unsubscribe();
     if (this.subsUpdate)
       this.subsUpdate.unsubscribe();
+    if (this.subsFile)
+      this.subsFile.unsubscribe();
   }
 
 }

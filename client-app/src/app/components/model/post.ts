@@ -1,19 +1,3 @@
-/* export interface Post {
-    id: number;
-    author: string;
-    date: string | null;
-    edited: boolean;
-    text: string;
-    isNew: boolean;
-    fileDescDto: fileDescDto[];
-}
-
-export interface fileDescDto {
-    name: string;
-    size: string;
-} */
-
-
 export class Post {
     id: number;
     author: string;

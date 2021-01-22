@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { CompackToastService, TypeToast } from 'ngx-compack';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
@@ -38,21 +38,20 @@ export class LoginDialogComponent implements OnInit {
         .subscribe(
           (data: boolean) => {
             if (data) {
-              this.cts.emitNewNotif({ title: 'Auth', message: 'Success', type: TypeToast.Success });
+              this.cts.emitNewNotif({ title: 'Авторизация', message: 'Успешно', type: TypeToast.Success });
               this.dialogRef.close(true);
             }
 
             else
-              this.cts.emitNewNotif({ title: 'Auth', message: 'Wrong log/pass', type: TypeToast.Error });
+              this.cts.emitNewNotif({ title: 'Авторизация', message: 'Неерный log/pass', type: TypeToast.Error });
           },
           error =>
-            this.cts.emitNewNotif({ title: 'Auth', message: 'Network error', type: TypeToast.Error })
+            this.cts.emitNewNotif({ title: 'Авторизация', message: 'Ошибка соединения', type: TypeToast.Error })
         );
   }
 
   cLoseDialog() {
     this.dialogRef.close(false);
   }
-
 
 }

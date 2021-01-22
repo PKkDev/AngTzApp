@@ -1,0 +1,21 @@
+@mixin basic_ico_btn {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+@mixin basic_btn($fontSize) {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: $fontSize;
+    color: #000000;
+
+    &:hover {
+        background-color: #ff5252;
+    }
+}
