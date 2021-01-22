@@ -13,7 +13,7 @@ import { InfoPanelComponent } from './components/info-panel/info-panel.component
 import { HeaderComponent } from './components/header/header.component';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 // compack
-import { CompackBannerModule, CompackToastModule } from 'ngx-compack';
+import { CompackBannerModule, CompackDatepickerModule, CompackToastModule } from 'ngx-compack';
 // mat
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -39,6 +39,7 @@ import { PostDateParsPipe } from './pipe/post-date-pars.pipe';
     LoginDialogComponent
   ],
   imports: [
+    CompackDatepickerModule,
     MatTooltipModule,
     MatInputModule,
     MatDialogModule,

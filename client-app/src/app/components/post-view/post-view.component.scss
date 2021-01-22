@@ -13,29 +13,60 @@
     display: flex;
     flex-direction: row;
 
+    @media (max-width: 540px) {
+        flex-direction: column;
+    }
+
     .post_body {
-        // flex-grow: 4;
         width: 70%;
         margin: 0 5px;
+
+        @media (min-width: 1600px) {
+            width: 80%;
+        }
+
+        @media (max-width: 540px) {
+            width: 97%;
+            margin: 0;
+            margin-bottom: 5px;
+            min-height: 100px;
+        }
     }
 
     .post_file {
         width: 30%;
         margin: 0 5px;
         position: relative;
-        // flex-grow: 1;
+        max-height: 299px;
+        overflow: auto;
 
-        .separate {
-            left: -5px;
-            position: absolute;
-            background-color: #979595;
-            width: 1px;
-            height: 100%;
-
-            &::before {
-                content: "";
-            }
+        @media (min-width: 1600px) {
+            width: 20%;
         }
+
+        @media (max-width: 540px) {
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        // .separate {
+        //     left: -5px;
+        //     position: absolute;
+        //     background-color: #979595;
+        //     width: 1px;
+        //     height: 100%;
+
+        //     @media (max-width: 540px) {
+        //         top: -5px;
+        //         height: 1px;
+        //         width: 100%;
+        //         // display: none;
+        //     }
+
+        //     &::before {
+        //         content: "";
+        //     }
+        // }
 
         .download {
             cursor: pointer;
@@ -48,10 +79,11 @@
         .file_item {
             margin: 2px 0;
             padding: 2px;
-            width: 96%;
+            width: 93%;
             display: flex;
             flex-direction: column;
             position: relative;
+            justify-content: center;
 
             span {
                 width: 96%;
@@ -82,6 +114,8 @@
 
     .post_title {
         font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         .post_date {
             font-size: 15px;

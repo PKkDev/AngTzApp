@@ -39,10 +39,6 @@ export class PostService implements OnDestroy {
     return this.posts$;
   }
 
-  // public getAddPostEventSubs() {
-  //   return this.addNewPost$;
-  // }
-
   public getCancelAddPostEventSubs() {
     return this.cancelAddNewPost$;
   }
@@ -50,10 +46,6 @@ export class PostService implements OnDestroy {
   public emiteUpdatePosts() {
     this.updateAllPost$.emit(true);
   }
-
-  // public emiteAddPosts() {
-  //   this.addNewPost$.emit(true);
-  // }
 
   public emiteCancelAddPosts() {
     this.cancelAddNewPost$.emit(true);
@@ -64,7 +56,7 @@ export class PostService implements OnDestroy {
       .pipe(
         map(value => {
           value.forEach(x => {
-            x.displayDate = moment(x.date, 'YYY-MM-DDTHH:mm:ss').format('D MMMM HH:mm')
+            x.displayDate = moment(x.date, 'YYYY-MM-DDTHH:mm:ss').format('D MMMM HH:mm')
             x.isNew = false
           })
           return value;

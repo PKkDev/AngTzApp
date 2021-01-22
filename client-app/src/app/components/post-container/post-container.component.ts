@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import * as moment from 'moment';
 import { AuthService } from 'src/app/services/auth.service';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from '../model/post';
@@ -15,6 +16,8 @@ export class PostContainerComponent implements OnInit, OnDestroy {
   public textFilter = '';
   // timeOut
   private timeOutFilter: any
+  // picker
+  public formatOutPut = 'YYYY-MM-DD HH:mm:ss';
 
   constructor(
     public authService: AuthService,
@@ -26,22 +29,14 @@ export class PostContainerComponent implements OnInit, OnDestroy {
     this.ps.getPostSubs()
       .subscribe(next => {
         this.listPost = next;
-        this.setTextFilter();
+        this.setTextFilter(false);
       })
 
     this.ps.getCancelAddPostEventSubs()
       .subscribe(() => {
         this.listPost.shift();
-        this.setTextFilter();
+        this.setTextFilter(false);
       });
-
-    // this.ps.getAddPostEventSubs()
-    //   .subscribe(() => {
-    //     if (this.listPost.find(x => x.isNew) == null) {
-    //       this.listPost.unshift({ author: '', date: null, displayDate: '', edited: false, id: -1, text: '', isNew: true, fileDescDto: [] });
-    //       this.setTextFilter();
-    //     }
-    //   })
   }
 
   ngOnDestroy() {
@@ -51,16 +46,37 @@ export class PostContainerComponent implements OnInit, OnDestroy {
   public emiteAddPost() {
     if (this.listPost.find(x => x.isNew) == null) {
       this.listPost.unshift({ author: '', date: null, displayDate: '', edited: false, id: -1, text: '', isNew: true, fileDescDto: [] });
-      this.setTextFilter();
+      this.setTextFilter(false);
     }
   }
 
-  public setTextFilter() {
-    if (this.timeOutFilter)
-      clearTimeout(this.timeOutFilter);
-    this.timeOutFilter = setTimeout(() => {
-      this.listViewPost = this.listPost.filter(x => x.author.trim().toLowerCase().includes(this.textFilter.trim().toLowerCase()) || x.isNew)
-    }, 1000 * 2)
+  public selectLastDateEvent(data: string[]) {
+    console.log(data);
+
+    this.setTextFilter(false);
+    if (data[0] != 'reset')
+      this.listViewPost = this.listViewPost.filter(x =>
+        moment(x.date, 'YYYY-MM-DDTHH:mm:ss').isBetween(moment(data[0], this.formatOutPut), moment(data[1], this.formatOutPut))
+        || x.isNew)
+  }
+
+  public setTextFilter(withTimer: boolean) {
+    if (withTimer) {
+      if (this.timeOutFilter)
+        clearTimeout(this.timeOutFilter);
+      this.timeOutFilter = setTimeout(() => {
+        this.filtered()
+      }, 1000 * 2);
+    } else {
+      this.filtered();
+    }
+  }
+
+  private filtered() {
+    this.listViewPost = this.listPost.filter(x =>
+      x.author.trim().toLowerCase().includes(this.textFilter.trim().toLowerCase())
+      || x.text.trim().toLowerCase().includes(this.textFilter.trim().toLowerCase())
+      || x.isNew)
   }
 
 }

@@ -11,12 +11,13 @@
         <div class="post_title">
             автор: {{postData?.author}}
             <span class="post_date">
+                <br>
                 {{postData?.edited?'изменён ':''}}
                 ({{postData?.displayDate}})
             </span>
         </div>
 
-        <hr>
+
 
         <div class="post_text">
             {{postData?.text}}
@@ -80,8 +81,6 @@
                 </mat-form-field>
 
             </div>
-
-            <hr>
 
             <div class="post_text">
 
@@ -149,9 +148,16 @@
 
     <div class="post_file">
 
-        <div class="separate"></div>
+        <!-- <div class="separate"></div> -->
 
-        файлы:
+        <div>
+            файлы:
+
+            <button class="add_file" type="button" mat-stroked-button (click)="fileInput.click()">выбрать</button>
+            <input accept="application/pdf" multiple required hidden (change)="onFileSelected(fileInput)" name="newIcon"
+                #fileInput type="file">
+        </div>
+
 
         <div class="file_item" *ngFor="let file of postData?.fileDescDto">
             <hr>
@@ -173,12 +179,6 @@
             </span>
             <button class="del_btn" (click)="removeFileFromSelected(file.name)">x</button>
         </div>
-
-        <button class="add_file" type="button" mat-stroked-button (click)="fileInput.click()">выбрать</button>
-        <input accept="application/pdf" multiple required hidden (change)="onFileSelected(fileInput)" name="newIcon"
-            #fileInput type="file">
-        <!--  <button *ngIf="selectedFiles.length !==0" class="add_file" type="button" mat-stroked-button
-            (click)="sendFileToServer()">добавить</button> -->
 
     </div>
 

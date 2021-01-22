@@ -4,6 +4,7 @@ import { CompackToastService, TypeToast } from 'ngx-compack';
 import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { PostService } from 'src/app/services/post.service';
 import { environment } from 'src/environments/environment';
 import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 
@@ -23,11 +24,15 @@ export class InfoPanelComponent implements OnInit, OnDestroy {
     public authService: AuthService,
     private apiService: ApiService,
     private cts: CompackToastService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public postService: PostService
   ) { }
 
   ngOnInit() {
-    this.getCountPost();
+    this.postService.getPostSubs()
+      .subscribe(
+        () => this.getCountPost()
+      );
   }
 
   ngOnDestroy() {
