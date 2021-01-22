@@ -59,7 +59,7 @@ export class PostContainerComponent implements OnInit, OnDestroy {
     if (this.timeOutFilter)
       clearTimeout(this.timeOutFilter);
     this.timeOutFilter = setTimeout(() => {
-      this.listViewPost = this.listPost.filter(x => x.author.includes(this.textFilter) || x.isNew)
+      this.listViewPost = this.listPost.filter(x => x.author.trim().toLowerCase().includes(this.textFilter.trim().toLowerCase()) || x.isNew)
     }, 1000 * 2)
   }
 
