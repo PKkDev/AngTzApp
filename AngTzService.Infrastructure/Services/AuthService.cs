@@ -31,7 +31,7 @@ namespace AngTzService.Infrastructure.Services
                 if (user.Password.Equals(auth.Password))
                     return true;
             }
-            return true;
+            return false;
         }
     }
 }

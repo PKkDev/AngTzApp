@@ -67,10 +67,8 @@ D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\appsettings.jso
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\3rdpartylicenses.txt
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\favicon.ico
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\index.html
-D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\main.de73e2eed8de38ac7c3e.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\polyfills.8c151b8375e767ff858f.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\runtime.0e49e2b53282f40c8925.js
-D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\styles.2f1cc8f3767dfcc1abd0.css
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\AngTzService.API.exe
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\AngTzService.API.deps.json
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\AngTzService.API.runtimeconfig.json
@@ -143,3 +141,6 @@ D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\nlog.config
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\NLog.dll
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\assets\scss\mixins.scss
+D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\main.5c45afd5207aa111963a.js
+D:\work\ang_tz\AngTzService\AngTzService\bin\Debug\netcoreapp3.1\clientApp\styles.253b7a5bf812b7d3cbf0.css
