@@ -25,7 +25,7 @@ namespace AngTzService.Infrastructure.Services
         /// <returns></returns>
         public async Task<bool> AuthUser(AuthDto auth, CancellationToken ct)
         {
-            var user = await _context.User.FirstOrDefaultAsync(x => x.UserName.Equals(x.Password), ct);
+            var user = await _context.User.FirstOrDefaultAsync(x => x.UserName.Equals(auth.UserName), ct);
             if (user != null)
             {
                 if (user.Password.Equals(auth.Password))

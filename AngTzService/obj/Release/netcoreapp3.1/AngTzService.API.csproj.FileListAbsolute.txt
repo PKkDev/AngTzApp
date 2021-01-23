@@ -78,5 +78,5 @@ D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\nlog.config
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.dll
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.Extensions.Logging.dll
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\NLog.Web.AspNetCore.dll
-D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\main.5c45afd5207aa111963a.js
 D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\styles.253b7a5bf812b7d3cbf0.css
+D:\work\ang_tz\AngTzService\AngTzService\bin\Release\netcoreapp3.1\clientApp\main.a50a4ffbeeefec40edfd.js

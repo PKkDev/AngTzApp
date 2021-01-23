@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { AuthService } from 'src/app/services/auth.service';
 import { PostService } from 'src/app/services/post.service';
+import { ResizeService } from 'src/app/services/resize.service';
 import { Post } from '../model/post';
 
 @Component({
@@ -17,11 +18,23 @@ export class PostContainerComponent implements OnInit, OnDestroy {
   // timeOut
   private timeOutFilter: any
   // picker
+  public typePicker = 'icon';
   public formatOutPut = 'YYYY-MM-DD HH:mm:ss';
 
   constructor(
+    // private res: ResizeService,
     public authService: AuthService,
     private ps: PostService) {
+
+    // res.getResizeEvent().subscribe(
+    //   (value: number) => {
+    //     if (value > 590) this.typePicker = 'line';
+    //     else this.typePicker = 'icon';
+
+    //     console.log(this.typePicker);
+
+    //   }
+    // )
   }
 
   ngOnInit() {
@@ -51,8 +64,6 @@ export class PostContainerComponent implements OnInit, OnDestroy {
   }
 
   public selectLastDateEvent(data: string[]) {
-    console.log(data);
-
     this.setTextFilter(false);
     if (data[0] != 'reset')
       this.listViewPost = this.listViewPost.filter(x =>
